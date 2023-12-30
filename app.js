@@ -18,10 +18,10 @@ var completedTasksHolder=document.getElementById("complete-task");//completed-ta
 var createNewTaskElement=function(taskString){
 
   var listItem=document.createElement("li");
-  listItem.classList.add("todo-item");
+  listItem.classList.add("todo__item");
   //input (checkbox)
   var checkBox=document.createElement("input");//checkbx
-  checkBox.classList.add("todo-checkbox");
+  checkBox.classList.add("todo__checkbox");
   //label
   var label=document.createElement("label");//label
   //input (text)
@@ -34,21 +34,21 @@ var createNewTaskElement=function(taskString){
   var deleteButtonImg=document.createElement("img");//delete button image
 
   label.innerText=taskString;
-  label.classList.add("todo-label", "task");
+  label.classList.add("todo__label", "todo__size");
 
   //Each elements, needs appending
   checkBox.type="checkbox";
   editInput.type="text";
-  editInput.classList.add("todo-input", "task");
+  editInput.classList.add("todo__input", "todo__size");
   
 
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-  editButton.classList.add("todo-button", "edit");
+  editButton.classList.add("todo__btn", "todo__btn_edit");
 
-  deleteButton.classList.add("todo-button", "delete");
+  deleteButton.classList.add("todo__btn", "todo__btn_delete");
   deleteButtonImg.src="./remove.svg";
   deleteButtonImg.alt = "Delete";
-  deleteButtonImg.classList.add("todo-icon");
+  deleteButtonImg.classList.add("todo__icon");
   deleteButton.appendChild(deleteButtonImg);
 
 
@@ -88,8 +88,8 @@ var editTask=function(){
 
   var editInput=listItem.querySelector("input[type=text]");
   var label=listItem.querySelector("label");
-  var editBtn=listItem.querySelector(".edit");
-  var containsClass=listItem.classList.contains("edit-mode");
+  var editBtn=listItem.querySelector(".todo__btn_edit");
+  var containsClass=listItem.classList.contains("todo__item_edit");
   //If class of the parent is .editmode
   if(containsClass){
 
@@ -103,7 +103,7 @@ var editTask=function(){
   }
 
   //toggle .editmode on the parent.
-  listItem.classList.toggle("edit-mode");
+  listItem.classList.toggle("todo__item_edit");
 };
 
 
@@ -160,8 +160,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
   console.log("bind list item events");
 //select ListItems children
   var checkBox=taskListItem.querySelector("input[type=checkbox]");
-  var editButton=taskListItem.querySelector("button.edit");
-  var deleteButton=taskListItem.querySelector("button.delete");
+  var editButton=taskListItem.querySelector(".todo__btn_edit");
+  var deleteButton=taskListItem.querySelector(".todo__btn_delete");
 
 
   //Bind editTask to edit button.

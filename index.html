@@ -9,50 +9,50 @@
 </head>
 <body class="page">
   <header class="matrix">
-    <img class="matrix-img" src="./eisenhower-matrix.jpg" alt="Eisenhower matrix">
-    <a class="matrix-inf" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+    <img class="matrix__img" src="./eisenhower-matrix.jpg" alt="Eisenhower matrix">
+    <a class="matrix__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
   </header>
   <main class="todo">
-    <nav class="form" id="todo-top">
-      <label for="new-task" class="form-label">Add Item</label>
-      <div class="task-row">
-        <input id="new-task" class="todo-input task" type="text">
-        <button class="todo-button">Add</button>
+    <nav class="nav" id="todo-top">
+      <label for="new-task" class="nav__label">Add Item</label>
+      <div class="nav__input">
+        <input id="new-task" class="todo__input todo__size" type="text">
+        <button class="todo__btn">Add</button>
       </div>
     </nav>
-    <section>
-      <h3 class="todo-title">Todo</h3>
-      <ul class="todo-list" id="incomplete-task">
-        <li class="todo-item">
-          <input class="todo-checkbox" type="checkbox">
-          <label class="todo-label task">Pay Bills</label>
-          <input type="text" class="todo-input task">
-          <button class="todo-button edit">Edit</button>
-          <button class="todo-button delete">
-            <img class="todo-icon" src="./remove.svg" alt="Delete">
+    <section class="todo__incomplete">
+      <h3 class="todo__title">Todo</h3>
+      <ul class="todo__list" id="incomplete-task">
+        <li class="todo__item">
+          <input class="todo__checkbox" type="checkbox">
+          <label class="todo__label todo__size">Pay Bills</label>
+          <input type="text" class="todo__input todo__size">
+          <button class="todo__btn todo__btn_edit">Edit</button>
+          <button class="todo__btn todo__btn_delete">
+            <img class="todo__icon" src="./remove.svg" alt="Delete">
           </button>
         </li>
-        <li class="todo-item edit-mode">
-          <input  class="todo-checkbox" type="checkbox">
-          <label class="todo-label task">Go Shopping</label>
-          <input type="text" value="Go Shopping" class="todo-input task">
-          <button class="todo-button edit">Save</button>
-          <button class="todo-button delete">
-            <img class="todo-icon" src="./remove.svg" alt="Delete">
+        <li class="todo__item todo__item_edit">
+          <input  class="todo__checkbox" type="checkbox">
+          <label class="todo__label todo__size">Go Shopping</label>
+          <input type="text" value="Go Shopping" class="todo__input todo__size">
+          <button class="todo__btn todo__btn_edit">Save</button>
+          <button class="todo__btn todo__btn_delete">
+            <img class="todo__icon" src="./remove.svg" alt="Delete">
           </button>
         </li>
       </ul>
     </section>
-    <section>
-      <h3 class="todo-title">Completed</h3>
-      <ul class="todo-list" id="complete-task">
-        <li class="todo-item">
-          <input  class="todo-checkbox" type="checkbox" checked>
-          <label class="todo-label task">See the Doctor</label>
-          <input type="text" class="todo-input task">
-          <button class="todo-button edit">Edit</button>
-          <button class="todo-button delete">
-            <img class="todo-icon" src="./remove.svg" alt="Delete">
+    <section class="todo__complete">
+      <h3 class="todo__title">Completed</h3>
+      <ul class="todo__list" id="complete-task">
+        <li class="todo__item">
+          <input  class="todo__checkbox" type="checkbox" checked>
+          <label class="todo__label todo__size">See the Doctor</label>
+          <input type="text" class="todo__input todo__size">
+          <button class="todo__btn todo__btn_edit">Edit</button>
+          <button class="todo__btn todo__btn_delete">
+            <img class="todo__icon" src="./remove.svg" alt="Delete">
           </button>
         </li>
       </ul>
